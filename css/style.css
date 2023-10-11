@@ -1,0 +1,130 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: rgb(56, 129, 49);
+    text-decoration: underline;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 350%;
+}
+
+h2 {
+    font-size: 190%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(56, 129, 49);
+}
+
+h3 {
+    font-size: 250%;
+    text-align: center;
+    color: rgb(56, 129, 49);
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+}
+
+h4{
+        font-size: 150%;
+        font-family:'Times New Roman', Times, serif;
+        color: rgb(188, 219, 190);
+  
+}
+
+a {
+    color: rgb(56, 129, 49);
+}
+
+a:hover {
+    color: rgb(165, 101, 42);
+}
+
+ol {
+    font-size: 150%;
+    color: rgb(56, 129, 49);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    
+}
+
+body {
+    background-color:rgb(218, 165, 75);
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    background-color: rgb(202, 155, 72);
+    border: 10px solid;
+    border-color:rgb(218, 165, 75);
+    
+}
+
+.container_dois {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    background-color: rgb(202, 155, 72);
+    border: 10px solid;
+    border-color:rgb(218, 165, 75);
+    border-radius: 10% 10%;
+    border-top-color: rgb(165, 101, 42);
+    border-right-color: rgb(165, 101, 42);
+    border-bottom-color: rgb(165, 101, 42);
+    border-left-color: rgb(165, 101, 42);
+    
+ }
+
+.shrink-1 {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.ods {
+    font-size: 145%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(188, 219, 190);
+    text-align: left;    
+}
+.ods_2{
+    font-size: 145%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(188, 219, 190);
+    text-align: center;    
+}
+
+.rodape {
+    text-align: center;
+    color: rgb(56, 129, 49);
+    font-size: 150%;
+}
+
+#menu{
+    background-color: rgb(31, 28, 25);
+}
+
+#menu ul {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 150%;
+}
+
+#menu ul li {
+    display: inline;
+}
+
+#menu ul li a {
+    color: rgb(56, 129, 49);
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#menu ul li a:hover {
+    background-color: rgb(165, 101, 42);
+}
+

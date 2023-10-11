@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="css/styleforms.css">
+</head>
+<body>
+    <nav id="menu">
+        <ul>
+            <li><a href="http://127.0.0.1:5500/PlanetaEco12.html">Home</a></li>
+            <li><a href="http://127.0.0.1:5500/formulário.html">Cadastramento</a></li>
+        </ul>
+    </nav><br>
+        <section class="container">
+            <form>
+                <label for="username">Nome Completo:</label><br>
+                    <input type="text" id="username" name="username" required><br>
+                <label for="telefone">Numero de telefone:</label><br>
+                    <input type="number" id="telefone" name="telefone"  required><br>
+                <label for="endereco">Endereço:</label><br>
+                    <input type="text" id="endereco" name="endereco" required><br>
+                <label for="complemento">Complemento:</label><br>
+                    <input type="text" id="complemento" name="complemento" required><br>
+                <label for="numero">Numero da casa:</label><br>
+                    <input type="number" id="numero" name="numero"  required><br>
+                <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required placeholder="insira um email valido"><br>
+                <h4><br>Qual tipo de reclicagem?<br>
+                    Todos: <input type="checkbox" name="todos"> <br>
+                    Vidro: <input type="checkbox" name="vidro"> <br>
+                    Metais: <input type="checkbox" name="metais"><br>
+                    Papel: <input type="checkbox" name="papel"><br>
+                    Lixo Eletrônico: <input type="checkbox" name="eletronico"><br>
+                </h4><br>
+                <label for="opn">Sugestão:</label><br>
+                    <textarea id="opn" name="opn" rows="5" cols="30"></textarea><br>
+                    <input type="submit" value="Enviar"><br>
+            </form>
+        </section>
+</body>
+</html>
