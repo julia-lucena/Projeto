@@ -4,7 +4,8 @@ var count = 1;
 
 
 function addPessoa(username, telefone) {
-  var newPessoa = { id: count++, username: username, telefone: telefone}; 
+  var currentDate = new Date();
+  var newPessoa = { id: count++, username: username, telefone: telefone, dataEnvio: currentDate.toLocaleString()}; 
   Listalist.push(newPessoa);
   localStorage.setItem('Listalist', JSON.stringify(Listalist)); 
   renderListalist();
@@ -38,7 +39,7 @@ function renderListalist() {
 
   Listalist.forEach(function (pessoa) {
     var listItem = document.createElement('li');
-    listItem.innerHTML = '<span class="pessoa-username">' + pessoa.username + '</span> (telefone: ' + pessoa.telefone + ') <button class="delete-button" onclick="deletePessoa(' + pessoa.id + ')">Excluir</button>';
+    listItem.innerHTML = '<span class="pessoa-username">' + pessoa.username + '</span> (telefone: ' + pessoa.telefone + ')  ---- (Data do cadastro: ' + pessoa.dataEnvio + ') <button class="delete-button" onclick="deletePessoa(' + pessoa.id + ')">Excluir</button>';
     pessoaListElement.appendChild(listItem);
   });
 }
@@ -81,3 +82,35 @@ document.getElementById('listaform').addEventListener('submit', function (event)
   document.getElementsByName('papel')[0].checked = false;
   document.getElementsByName('eletronico')[0].checked = false;
 });
+
+document.getElementById('pesquisarCamp').addEventListener('input', function () {
+  var pesquisaTermo = this.value.toLowerCase();
+
+  if (!pesquisaTermo) {
+      renderListalist();
+  } else {
+      var filtro = Listalist.filter(function (pessoa) {
+          return pessoa.username.toLowerCase().includes(pesquisaTermo) || pessoa.telefone.toString().includes(pesquisaTermo);
+      });
+      renderPesquisa(filtro);
+  }
+});
+
+function Pesquisa(){
+  var pesquisaTermo = document.getElementById('pesquisarCamp').value.toLowerCase();
+  var filtro = Listalist.filter(function (pessoa) {
+      return pessoa.username.toLowerCase().includes(pesquisaTermo) || pessoa.telefone.toString().includes(pesquisaTermo);
+  });
+  renderPesquisa(filtro);
+}
+
+function renderPesquisa(Pesquisa) {
+  var pessoaListElement = document.getElementById('Listalist');
+  pessoaListElement.innerHTML = '';
+
+  Pesquisa.forEach(function (pessoa) {
+    var listItem = document.createElement('li');
+    listItem.innerHTML = '<span class="pessoa-username">' + pessoa.username + '</span> (telefone: ' + pessoa.telefone + ')  ---- (Data do cadastro: ' + pessoa.dataEnvio + ') <button class="delete-button" onclick="deletePessoa(' + pessoa.id + ')">Excluir</button>';
+    pessoaListElement.appendChild(listItem);
+  });
+}
