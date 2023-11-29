@@ -2,7 +2,6 @@
 var Listalist = []; 
 var count = 1;
 
-
 function addPessoa(username, telefone) {
   var currentDate = new Date();
   var newPessoa = { id: count++, username: username, telefone: telefone, dataEnvio: currentDate.toLocaleString()}; 
